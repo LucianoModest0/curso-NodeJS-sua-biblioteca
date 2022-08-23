@@ -2,9 +2,53 @@ import chalk from "chalk";
 
 import * as fs from "fs";
 
+// using regex to find links inside markdown file and return an object array
+function extractLinks(text) {
+  const regex = /\[([^\]]*)\]\((https?:\/\/[^$#\s].[^\s]*)\)/gm;
+  const arrResults = [];
+  let temp;
+
+  while ((temp = regex.exec(text)) !== null) {
+    arrResults.push({
+      [temp[1]]: temp[2],
+    });
+  }
+
+  return arrResults;
+}
+
+// function to show erros using throw
 function treatError(err) {
   throw new Error(chalk.red(err.code, "sem arquivo no diretório"));
 }
+
+// // using async and await to an asynchronous code, try/cath to to capture errors
+
+async function takeFile(filePath) {
+  const encoding = "utf-8";
+
+  try {
+    const text = await fs.promises.readFile(filePath, encoding);
+    console.log(extractLinks(text));
+  } catch (err) {
+    treatError(err);
+  }
+}
+
+takeFile("./text.md");
+
+/* >>> use promises to an asynchronous code, 'then' is callback method here and 'catch' shows error
+function takeFile(filePath) {
+  const encoding = "utf-8";
+  fs.promises
+    .readFile(filePath, encoding)
+    .then((text) => console.log(text))
+    .catch((err) => treatError(err));
+}
+
+takeFile("./text.md"); */
+
+/* >>>>>>>>>>> using fs.readFile, with filepath, code in utf-8 and callback function
 
 function takeFile(filePath) {
   const encoding = "utf-8";
@@ -16,9 +60,11 @@ function takeFile(filePath) {
   });
 }
 
-takeFile("./text.md");
 
-/* >>>>>>> Initial project/ testing chalk
+takeFile("./text.md");
+*/
+
+/* >>>>>>>>>>> Content from initial project/ testing chalk
 
 console.log(chalk.red("Hello world!"));
 
