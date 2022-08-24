@@ -22,7 +22,7 @@ function createURLsArr(arrLinks) {
   return arrLinks.map((objectLink) => Object.values(objectLink).join());
 }
 
-export async function validURLs(arrLinks) {
+export default async function validURLs(arrLinks) {
   const links = createURLsArr(arrLinks);
   const statusLinks = await checkStatus(links);
 

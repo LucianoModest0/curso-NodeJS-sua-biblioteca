@@ -24,7 +24,7 @@ function treatError(err) {
 
 // // using async and await to an asynchronous code, try/cath to to capture errors
 
-export async function takeFile(filePath) {
+export default async function takeFile(filePath) {
   const encoding = "utf-8";
 
   try {
