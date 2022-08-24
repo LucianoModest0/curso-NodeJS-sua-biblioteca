@@ -14,7 +14,7 @@ function extractLinks(text) {
     });
   }
 
-  return arrResults;
+  return arrResults.length === 0 ? "Não há links" : arrResults;
 }
 
 // function to show erros using throw
@@ -24,18 +24,18 @@ function treatError(err) {
 
 // // using async and await to an asynchronous code, try/cath to to capture errors
 
-async function takeFile(filePath) {
+export async function takeFile(filePath) {
   const encoding = "utf-8";
 
   try {
     const text = await fs.promises.readFile(filePath, encoding);
-    console.log(extractLinks(text));
+    return extractLinks(text);
   } catch (err) {
     treatError(err);
   }
 }
 
-takeFile("./text.md");
+//takeFile("./text.md");
 
 /* >>> use promises to an asynchronous code, 'then' is callback method here and 'catch' shows error
 function takeFile(filePath) {
