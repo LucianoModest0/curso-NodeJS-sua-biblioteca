@@ -1,4 +1,4 @@
-import chalk from "chalk";
+// import chalk from "chalk";
 
 import * as fs from "fs";
 
@@ -19,12 +19,12 @@ function extractLinks(text) {
 
 // function to show erros using throw
 function treatError(err) {
-  throw new Error(chalk.red(err.code, "sem arquivo no diretório"));
+  throw new Error(err.code, "sem arquivo no diretório");
 }
 
 // // using async and await to an asynchronous code, try/cath to to capture errors
 
-export default async function takeFile(filePath) {
+export default async function getFile(filePath) {
   const encoding = "utf-8";
 
   try {

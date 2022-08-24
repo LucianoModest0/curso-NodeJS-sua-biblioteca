@@ -97,6 +97,4 @@ exec
 
 - ERROR -
 
-  to fix: https://cursos.alura.com.br/forum/topico-teste-nao-funciona-resolvido-192606
-
-#### how i solve... (WIP)
+  How to [fix](https://cursos.alura.com.br/forum/topico-teste-nao-funciona-resolvido-192606)

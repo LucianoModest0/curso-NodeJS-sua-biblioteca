@@ -1,5 +1,5 @@
-import takeFile from "../index.js";
+import getFile from "../index.js";
 
 test("deve ser uma função", () => {
-  expect(typeof takeFile).toBe("function");
+  expect(typeof getFile).toBe("function");
 });
