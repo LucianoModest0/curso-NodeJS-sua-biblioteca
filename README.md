@@ -1,4 +1,4 @@
-## Curso de NodeJS: criando sua biblioteca [ em andamento]
+## Curso de NodeJS: criando sua biblioteca
 
 #### Aprendizados adquiridos durante o curso:
 
