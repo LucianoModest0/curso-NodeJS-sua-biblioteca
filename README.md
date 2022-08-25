@@ -1,13 +1,12 @@
 ## Curso de NodeJS: criando sua biblioteca [ em andamento]
 
-#### Aprendizados propostos durante o curso:
+#### Aprendizados adquiridos durante o curso:
 
-- Aprenda a importar e utilizar código de repositórios de código aberto
-- Entenda o que são as promessas e como trabalhar com código assíncrono em NodeJS
-- Escreva suas primeiras expressões regulares e veja como utilizá-las para resolver problemas
-- Crie seus próprios comandos para serem executados no terminal
-- Use as bibliotecas do NodeJS para fazer requisições HTTP e manejar respostas
-- Faça seus primeiros testes de unidade com Jest
+- Importação e utilização de código de repositórios de código aberto
+- Promessas e código assíncrono em NodeJS
+- Expressões regulares para resolver problemas
+- Bibliotecas do NodeJS para fazer requisições HTTP e manejo de respostas
+- Testes de unidade com Jest
 
 #### O Curso faz parte da formação Javascript para BackEnd em sua terceira parte, _Avançando com ferramentas e paradigmas_
 
