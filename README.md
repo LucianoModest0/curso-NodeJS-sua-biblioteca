@@ -95,6 +95,6 @@ exec
 
 > npm run test
 
-- ERROR -
+- ERROR ESM -
 
   How to [fix](https://cursos.alura.com.br/forum/topico-teste-nao-funciona-resolvido-192606)

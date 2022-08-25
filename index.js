@@ -14,7 +14,7 @@ function extractLinks(text) {
     });
   }
 
-  return arrResults.length === 0 ? "Não há links" : arrResults;
+  return arrResults.length === 0 ? "não há links" : arrResults;
 }
 
 // function to show erros using throw
